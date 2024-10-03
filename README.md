@@ -5,7 +5,7 @@ This is a web application with role-based functionality that displays different 
 user's role (Buyer, Seller, or Superadmin). Buyers and Sellers see KPI cards with key information related to their 
 purchases or sales, while Superadmins can manage buyers and sellers.
 
-The system is built with Django, providing a robust backend to handle all inventory operations while leveraging 
+The system is built with Django, providing a robust backend to handle all buyer-seller operations while leveraging 
 RESTful API architecture for frontend integrations.
 ![GitHub](https://img.shields.io/badge/GitHub-Buyer_seller_management-blue?style=flat-square&logo=github)
 ![Django](https://img.shields.io/badge/Django-Python-yellow?style=flat-square&logo=django)
