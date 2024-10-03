@@ -218,7 +218,7 @@
             localStorage.removeItem('access_token'); // Remove access token
             localStorage.removeItem('refresh_token'); // Remove refresh token
             // Redirect to login or show a message
-            window.location.href = '/'; // Example redirection to login page
+            window.location.href = '/';
         } else {
             const errorData = await response.json();
             console.error('Logout failed:', errorData.detail);
@@ -257,7 +257,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     const userRole = localStorage.getItem('user_role');
     const navMenu = document.getElementById('navMenu');
-     console.log("*******************")// Make sure to replace 'navMenu' with the actual ID of your nav element
+     console.log("*******************")
     console.log(userRole);
 
     // Check if the user is not Superadmin
@@ -338,7 +338,7 @@
         // Fetch KPI data from the API
         document.getElementById('kpiCardContainer').style.display = 'block';
         const accessToken = localStorage.getItem('access_token');
-        const apiUrl = `http://127.0.0.1:8000/api/sellers/seller-kpi-card/`; // Update the base URL
+        const apiUrl = `http://127.0.0.1:8000/api/sellers/seller-kpi-card/`;
 
         fetch(apiUrl, {
             method: 'GET',
@@ -367,7 +367,7 @@
 // Function to load data based on the type (buyers or sellers)
 function loadData(type) {
     const accessToken = localStorage.getItem('access_token');
-    const apiUrl = `http://127.0.0.1:8000/api/${type}/list/`; // Replace with the correct API endpoint
+    const apiUrl = `http://127.0.0.1:8000/api/${type}/list/`;
 
     // Set the table title based on type
     document.getElementById('tableTitle').textContent = type === 'buyers' ? 'Buyers List' : 'Sellers List';
@@ -443,7 +443,7 @@ function addActionListeners() {
   <script>
       function openRegistrationModal(role) {
         document.getElementById('role').value = role; // Set the role in the dropdown
-        $('#registrationModal').modal('show'); // Use Bootstrap modal
+        $('#registrationModal').modal('show');
     }
     // Handle the registration form submission
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -468,7 +468,7 @@ function addActionListeners() {
 
     function registerUser(userData) {
         const accessToken = localStorage.getItem('access_token');
-        const apiUrl = `http://127.0.0.1:8000/api/users/registration/`; // Update with your registration endpoint
+        const apiUrl = `http://127.0.0.1:8000/api/users/registration/`;
 
         fetch(apiUrl, {
             method: 'POST',
@@ -537,13 +537,13 @@ function addActionListeners() {
 
 function deleteUser(id, type) {
     const accessToken = localStorage.getItem('access_token');
-    let apiUrl; // Declare apiUrl outside the if blocks
+    let apiUrl;
 
     // Assign the appropriate API URL based on type (Seller or Buyer)
     if (type === "Seller") {
-        apiUrl = `http://127.0.0.1:8000/api/sellers/${id}/`; // Update with your delete endpoint
+        apiUrl = `http://127.0.0.1:8000/api/sellers/${id}/`;
     } else if (type === "Buyer") {
-        apiUrl = `http://127.0.0.1:8000/api/buyers/${id}/`; // Update with your delete endpoint
+        apiUrl = `http://127.0.0.1:8000/api/buyers/${id}/`;
     }
 
     // Ensure apiUrl is defined before making the request
