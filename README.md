@@ -59,3 +59,11 @@ Make sure you have Python 3.x installed. Clone the repository and navigate to th
 7. **Run development server**
     ```bash
    python manage.py runserver
+
+
+## Swagger
+- **You can see Swagger documentation using**
+    ```bash
+       http://127.0.0.1:8000/swagger/
+
+.
