@@ -1,0 +1,8 @@
+*.pyc
+*.log
+venv
+.idea/*
+venv/*
+.env
+migrations/
+
